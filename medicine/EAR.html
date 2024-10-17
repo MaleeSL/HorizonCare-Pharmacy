@@ -1,61 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MEDICINE|Pure Care Pharmacy</title>
-    <link rel="stylesheet" href="CSS/style.css">
-    <script src="JS/script.js" defer></script>
-    <script src="https://kit.fontawesome.com/5ee0b91135.js" crossorigin="anonymous"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MEDICINE|horizoncare Pharmacy</title>
+        <link rel="stylesheet" href="CSS/style.css?v=<?php echo time(); ?>">
+        <script src="JS/script.js" defer></script>
+        <script src="https://kit.fontawesome.com/5ee0b91135.js" crossorigin="anonymous"></script>
+    </head>
 <body>
     <header>
         <div class="logo">
-            <a href="index.html"><img src="image/Horizoncarelogo.jpg" alt="Pharmacy Logo"></a>
+            <a href="../index.php"><img src="images/Horizoncarelogo.jpg" alt="Pharmacy Logo"></a>
         </div>
-        <div class="search-bar">
-          <input type="text" placeholder="Search...">
-          <button type="submit"><img src="image/search-icon.png" alt="Search"></button>
-        </div>
-        <div>
-            <button class="add-prescription"><a href="prescription/prescription.html">Upload Prescription</a></button>
-        </div>
+        
+      
         <div class="user-links">
-          <a href="#" class = "cart"><img src="image/cart.png" alt="Cart"></a>
-          <a href="#" onclick="openLoginPopup()"><img src="image/login.png" alt="Login"></a>
+          <a href="#" class = "cart"><img src="images/cart.png" alt="Cart"></a>
+          <a href="#" onclick="openLoginPopup()"><img src="images/login.png" alt="Login"></a>
         </div>
     </header>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="COUGH.html">Medicine</a></li>
-                <li><a href="../MedicalD/new4/device.html">Medical Device</a></li>
-                <li><a href="../Wellness/bs/Beauty suppliment.html">Wellness</a></li>
-                <li><a href="../Personal Care/Body/bodycare.html">Personal Care</a></li>
-                <li><a href="../AboutUs/index.html">About Us</a></li>
-            </ul>
-        </nav>
-  <br>
-       
-  <div class="sort-container">
-    <label for="sort" class="sort-label">Sort By:</label>
-    <select id="sort" class="sort-dropdown">
-        <option value="HEART.html">Heart and Diebates</option>
-        <option value="COUGH.html">Cough/Cold and Allergy</option>
-        <option value="PAIN.html">Pain and Fever</option>
-        <option value="EAR.html">Ear/Nose and Throat</option>
-        <option value="EYE.html">Eye</option>
-        <option value="VITAMIN.html">Vitamin and Minerals</option>
-    </select>
- </div>
-    <div class="searchbox">
-        <input type="text" placeholder="Search...">
-        <a href="#">
-            <i class="fas fa-search"></i>
-        </a>
 
+    <div class="sort-container">
+        <label for="sort" class="sort-label">Sort By:</label>
+        <select id="sort" class="sort-dropdown">
+            <option value="EAR.html">Ear/Nose and Throat</option>
+            <option value="COUGH.html">Cough/Cold and Allergy</option>
+            <option value="HEART.html">Heart and Diabetes</option>
+            <option value="EYE.html">Eye</option>
+        </select>
     </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const sortDropdown = document.getElementById('sort');
+    
+        // When the dropdown value changes, redirect to the selected option's value
+        sortDropdown.addEventListener('change', function() {
+            const selectedPage = this.value; // Get the selected value (page)
+            window.location.href = selectedPage; // Redirect to the selected page
+        });
+    });
+    </script>
+</body>
+</html>
+
+
     
 
     </div>
@@ -230,6 +221,8 @@
                 <button type="submit" class="btn">Subscribe</button>
             </form>
         </section>
+
+      
 
 </body>
 </html>
