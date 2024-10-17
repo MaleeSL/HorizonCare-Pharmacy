@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MEDICINE|horizoncare Pharmacy</title>
-        <link rel="stylesheet" href="CSS/style.css?v=<?php echo time(); ?>">
-        <script src="JS/script.js" defer></script>
-        <script src="https://kit.fontawesome.com/5ee0b91135.js" crossorigin="anonymous"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>Horizon Care</title>
+    <link rel="stylesheet" href="CSS/style.css?v=<?php echo time(); ?>">
+    <script src="script/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 <body>
     <header>
         <div class="logo">
-            <a href="../index.php"><img src="images/Horizoncarelogo.jpg" alt="Pharmacy Logo"></a>
+            <a href="index.php"><img src="icons/Horizoncarelogo.jpg" alt="Pharmacy Logo"></a>
         </div>
-        
-      
+        <div class="search-bar">
+          <input type="text" placeholder="Search...">
+          <button type="submit"><img src="icons/search-icon.png" alt="Search"></button>
+        </div>
+       
         <div class="user-links">
-          <a href="#" class = "cart"><img src="images/cart.png" alt="Cart"></a>
-          <a href="#" onclick="openLoginPopup()"><img src="images/login.png" alt="Login"></a>
+          <a href="cart/cart.html" class = "cart"><img src="icons/cart.png" alt="Cart"></a>
+          <a href="#" onclick="openLoginPopup()"><img src="icons/login.png" alt="Login"></a>
         </div>
     </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="medicine/COUGH.html">Medicine</a></li>
+            <li><a href="MedicalD/new4/device.html">Medical Devices</a></li>
+            <li><a href="Wellness/bs/Beauty-suppliment.html">Wellness</a></li>
+            <li><a href="Personal-Care/Body/bodycare.html">Personal Care</a></li>
+            <li><a href="AboutUs/index.html">About Us</a></li>
+        </ul>
+    </nav>
+    
 
     <div class="sort-container">
         <label for="sort" class="sort-label">Sort By:</label>
