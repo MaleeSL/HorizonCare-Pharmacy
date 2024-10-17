@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Horizon Care</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.php"><img src="icons/Horizoncarelogo.jpg" alt="Pharmacy Logo"></a>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Search...">
+          <button type="submit"><img src="icons/search-icon.png" alt="Search"></button>
+        </div>
+       
+        <div class="user-links">
+          <a href="cart/cart.html" class = "cart"><img src="icons/cart.png" alt="Cart"></a>
+          <a href="#" onclick="openLoginPopup()"><img src="icons/login.png" alt="Login"></a>
+        </div>
+    </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="medicine/COUGH.html">Medicine</a></li>
+                <li><a href="MedicalD/new4/device.html">Medical Devices</a></li>
+                <li><a href="Wellness/bs/Beauty suppliment.html">Wellness</a></li>
+                <li><a href="Personal Care/Body/bodycare.html">Personal Care</a></li>
+                <li><a href="AboutUs/index.html">About Us</a></li>
+            </ul>
+        </nav>
+    <main>
+        <section class="hero">
+            <h1>Welcome to Horizon Pharmacy</h1>
+            <p>"Our mission is to empower healthier lives by delivering trusted, accessible, and compassionate healthcare solutions.".</p>
+            <a href="IWT IMages/PAIN.html" class="btn">Shop Now</a>
+        </section>
+        <section class="featured-books">
+            <h2>Featured Medics</h2>
+            <div class="medi-grid">
+                <div class="book">
+                    <img src="images/humira.jpg" alt="Humira">
+                    <h3>Humira</h3>
+                    <p class="author">AbbVie</p>
+                    <p class="price">Rs.399.99</p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+                <div class="book">
+                    <img src="images/Keytruda.jpg" alt="Keytruda">
+                    <h3>Keytruda</h3>
+                    <p class="author">Merck & Co.</p>
+                    <p class="price">Rs.199.99</p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+                <div class="book">
+                    <img src="images/panadol.jpg" alt="Book Title">
+                    <h3>Panadol</h3>
+                    <p class="author">panadol</p>
+                    <p class="price">Rs.99.99</p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+                <div class="book">
+                    <img src="images/Eylea.jpg" alt="Eylea">
+                    <h3>Eylea</h3>
+                    <p class="author">Regeneron Pharmaceuticals, Bayer</p>
+                    <p class="price">Rs.859.99</p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+        </section>
+        <section class="newsletter">
+            <h2>Subscribe to our Newsletter</h2>
+            <form method="post" action="newslettercrud.php">
+                <input type="email" name="email" placeholder="Enter your email address">
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </section>
+        <br>
+        <br>
+        <hr class="hr">
+        <br>
+        <br>
+        <section id="about" class="about">
+            <h2>About Us</h2>
+            <p>Horizon Care Pharmacy, your trusted partner in all your healthcare and medication needs.</p> 
+    <p>At HorizonCarePharmacy.com, we are committed to delivering top-tier pharmaceutical products and personalized services to our valued customers. From prescription medications to over-the-counter remedies and health products, we cater to a wide range of healthcare needs with a focus on quality and safety.</p> 
+    <p>Our team of experienced, highly trained pharmacists is dedicated to your well-being. We ensure every detail is managed with professionalism and care, providing you with accurate advice and personalized attention to help you make informed decisions about your health.</p>
+    <p>Our easy-to-use online platform makes it simple to explore, order, and refill your medications from the comfort of your home. With secure, confidential transactions, quick delivery, and dependable customer service, we aim to provide a seamless online pharmacy experience.</p>
+    <p>Whether you need guidance on medication usage, assistance with dosage instructions, or general healthcare advice, our knowledgeable and friendly pharmacists are always available to assist you. At Horizon Care Pharmacy, we are committed to promoting health, wellness, and safety in our community.</p>
+    <p>Thank you for choosing Horizon Care Pharmacy. We are honored to be your trusted source for reliable healthcare solutions and look forward to serving you.</p>
+        </section>
+    </main>
+    <div id="loginPopup" class="login-popup">
+        <div class="login-content">
+            <span class="close" onclick="closeLoginPopup()">&times;</span>
+            <h2>Login</h2>
+            <form action="login.php" method="POST">
+                <label for="email">email</label>
+                <input type="text" id="email" name="email" placeholder="Enter your email">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+                <button type="submit" class="btn">Login</button>
+                <p>Don't have an account? <a href="LoginPage/Resgister.html">Register</a></p>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-row">
+          <div class="footer-column">
+            <h3>Product Range</h3>
+            <ul>
+              <li>Health</li>
+              <li>Body care</li>
+              <li>Personal care</li>
+              <li>Mother and baby</li>
+              <li>Wellness</li>
+              <li>Traditional Remedies</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Information</h3>
+            <ul>
+              <li>About Us</li>
+              <li>FAQ</li>
+              <li>Contact Us</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contact Info</h3>
+            <ul>
+              <li>Address: No 34,kisthuraja mawatha, waliwita, Kaduwela.</li>
+              <li>Email: info@horizoncare.com</li>
+              <li>Phone: +94 70 307 0356</li>
+              <li>WhatsApp: +94 70 307 0356</li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Follow Us</h3>
+            <ul class="social-media">
+                <li><a href="https://www.facebook.com" target="_blank"><img src="icons/facebook1.png" alt="Facebook"></a></li>
+                <li><a href="https://www.twitter.com" target="_blank"><img src="icons/twitter.png" alt="Twitter"></a></li>
+                <li><a href="https://www.instagram.com" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a></li>
+                <li><a href="https://wa.me/+94703070356" target="_blank"><img src="icons/whatapp.png" alt="WhatsApp"></a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    <script>
+        function openLoginPopup() {
+            document.getElementById("loginPopup").style.display = "block";
+        }
+        
+        function closeLoginPopup() {
+            document.getElementById("loginPopup").style.display = "none";
+        }
+    </script>
+    
+</body>
+</html>
