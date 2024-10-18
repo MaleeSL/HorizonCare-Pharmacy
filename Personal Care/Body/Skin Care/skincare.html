@@ -11,6 +11,7 @@
 </head>
 <body> 
     
+    
     <header>
         <div class="logo">
             <a href="../../index.php"><img src="icons/Horizoncarelogo.jpg" alt="Pharmacy Logo"></a>
@@ -42,9 +43,32 @@
   <div class="sort-container">
     <label for="sort" class="sort-label">Sort By:</label>
     <select id="sort" class="sort-dropdown">
-        <option value="device.html">Personal Care</option>
-        <option value="device2.html">Skin Care</option>
+        <option value="skin-care">Skin Care</option>
+        <option value="personal-care">Personal Care</option>
     </select>
+</div>
+
+
+        <script>
+           document.getElementById('sort').addEventListener('change', function() {
+    const selectedCategory = this.value;
+    const products = document.querySelectorAll('.products');
+
+    products.forEach(product => {
+        const category = product.getAttribute('data-category');
+
+        // Show or hide products based on selected category
+        if (selectedCategory === 'skin-care' && category === 'skin-care') {
+            product.style.display = 'block'; // Show skin care products
+        } else if (selectedCategory === 'personal-care' && category === 'personal-care') {
+            product.style.display = 'block'; // Show personal care products
+        } else {
+            product.style.display = 'none'; // Hide others
+        }
+    });
+});
+
+        </script>
  </div>
 
     <div class="searchbox">
@@ -54,6 +78,7 @@
         </a>
     </div>
     </div>
+   
 
     <div class="container"  id="product-list">
         <h3 class="title">Skin Care</h3><hr><br><br>
