@@ -42,19 +42,35 @@
   <div class="sort-container">
     <label for="sort" class="sort-label">Sort By:</label>
     <select id="sort" class="sort-dropdown">
-        <option value="">Beauty Suppliment</option>
-        <option value="Wellness\Diet\DT.html">Diet and Nutrition</option>
-        <option value="Wellness\Traditional\Traditional remidy.html">Traditional Remidies</option>
+        <option value="#">Beauty Supplement</option>
+        <option value="../../Wellness/Diet/DT.html">Diet and Nutrition</option>
+        
     </select>
- </div>
+</div>
 
-    <div class="searchbox">
-        <input type="text" placeholder="Search...">
-        <a href="#">
-            <i class="fas fa-search"></i>
-        </a>
+<script>
+    document.getElementById('sort').addEventListener('change', function () {
+        const selectedValue = this.value;
+        console.log("Selected Value:", selectedValue);  // Debugging log
 
-    </div>
+        if (selectedValue !== "#") {
+            // Check if the URL is correct
+            fetch(selectedValue, { method: 'HEAD' })
+                .then(response => {
+                    if (response.ok) {
+                        window.location.href = selectedValue;  // Redirect if valid
+                    } else {
+                        console.error("Page not found:", selectedValue);  // Error log
+                        alert("The selected page could not be found.");
+                    }
+                })
+                .catch(error => {
+                    console.error("Error loading page:", error);  // Error log
+                    alert("An error occurred while loading the page.");
+                });
+        }
+    });
+</script>
 
     </div>
     <div class="container"  id="product-list">
